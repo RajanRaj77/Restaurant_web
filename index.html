@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udhayam Restorent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./index.css"  />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav-wrapper" id="navbar">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Udhayam<br>Restaurant</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto position-relative" id="menu">
+                        <span class="indicator"></span>
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#menu">Our Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="contact-button">Order Now</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="./dishvideo.mp4" type="video/mp4">
+            <!-- Your browser does not support the video tag. -->
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="float">Authentic South Indian Cuisine</h1>
+            <p>Experience the taste of tradition</p>
+            <a href="#menu" class="hero-btn">Explore Menu</a>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Udhayam</h2>
+            <p class="section-subtitle fade-in">Serving authentic South Indian delicacies since 1985</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 slide-left">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600"
+                        class="img-fluid rounded" alt="Restaurant">
+                </div>
+                <div class="col-md-6 slide-right">
+                    <p style="font-size: 18px; line-height: 1.8; color: #666;">
+                        At Udhayam Restaurant, we bring you the authentic flavors of South India.
+                        Our recipes have been passed down through generations, ensuring that every dish
+                        captures the essence of traditional Indian cooking. From aromatic biryanis to
+                        crispy dosas, every meal is prepared with love and the finest ingredients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Menu</h2>
+            <p class="section-subtitle fade-in">Discover our delicious offerings</p>
+
+            <div class="menu-categories fade-in">
+                <button class="category-btn active" onclick="filterMenu('all', this)">All Items</button>
+                <button class="category-btn" onclick="filterMenu('veg', this)">Veg Meals</button>
+                <button class="category-btn" onclick="filterMenu('nonveg', this)">Non-Veg</button>
+                <button class="category-btn" onclick="filterMenu('dessert', this)">Desserts</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title fade-in">Gallery</h2>
+            <p class="section-subtitle fade-in">A visual feast of our culinary creations</p>
+            <div class="gallery-grid">
+                <div class="gallery-item scale-in stagger-1"><img
+                        src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400" alt="Gallery"></div>
+                <div class="gallery-item scale-in stagger-2"><img
+                        src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=400" alt="Gallery"></div>
+                <div class="gallery-item scale-in stagger-3"><img
+                        src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400" alt="Gallery"></div>
+                <div class="gallery-item scale-in stagger-4"><img
+                        src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400" alt="Gallery"></div>
+                <div class="gallery-item scale-in stagger-5"><img
+                        src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400" alt="Gallery"></div>
+                <div class="gallery-item scale-in stagger-6"><img
+                        src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400" alt="Gallery"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact Us</h2>
+            <div class="contact-info fade-in">
+                <p><strong>Address:</strong> 123 Main Street, nandhanam, Chennai, India</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+                <p><strong>Email:</strong> info@udhayamrestaurant.com</p>
+                <p><strong>Hours:</strong> Open Daily 11:00 AM - 11:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Udhayam Restaurant. All rights reserved.</p>
+    </footer>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
